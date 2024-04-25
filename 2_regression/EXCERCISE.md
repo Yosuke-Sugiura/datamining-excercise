@@ -7,7 +7,8 @@
 1. データ [`boston.csv`](./boston.csv) を確認する．また [データの設置されていたWebサイト（外部リンク）](https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html) の説明を眺める．
 1. コード [`regression.py`](./regression.py) を実行して結果を確認する．データ [`boston.csv`](./boston.csv) を同じフォルダに設置しておくこと．
     > ヒント：データの設置方法については[ColaboratoryにGoogle Driveをマウントする方法](https://github.com/YosukeSugiura/datamining-excercise/blob/master/1_python_basics/EXCERCISE.md#colaboratory%E3%81%A7google-drive%E3%82%92%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF)を確認すること．
-3. コード [`regression.py`](./regression.py) の意味を読み取る．特徴量として1つしか使っていないことに注意．他のいくつかの特徴量を使ってプロットして，特徴量から予想される住宅価格の変化と一致するかどうかを確認する．
+3. コード [`regression.py`](./regression.py) の意味を読み取る．特徴量として1つしか使っていないことに注意．他の特徴量を使ってプロットして，特徴量から予想される住宅価格の変化と一致するかどうかを確認する．
+    > ヒント：`np.loadtxt`の`usecols`はcsvファイルから取り出す列の番号を指定するもの．
 4. コードの中の
 
     ```python
@@ -17,6 +18,7 @@
     の意味を考える．この前後に `print` を使って `inputs` を出力して見ると違いがわかるはず．また，この部分をコメントアウトして，エラーメッセージを見てみるのもいいかもしれない．
 
 1. コードを別名で保存しておき，プロットする部分を削除する．特徴量をすべて読み込んだり，もしくはいくつかだけ読み込んだりして，係数を調べる．
+    > ヒント：`np.loadtxt`の`usecols` を消すと，csvファイルのすべての列を読み込む．
 1. scikit-learn (sklearn) の英語のマニュアルを調べるなどして，*R*<sup>2</sup> スコア (score) を出力する．
 1. 重回帰分析，標準化，標準偏回帰係数などについて調べ，sklearnのLinearRegressionで標準化をして係数を出力する．（`fit_intercept`というパラメータに注意すること．また標準化については`StandardScaler`について調べてみると良い）
 1. （発展）ある一つの特徴量を横軸に，住宅価格を縦軸にプロットする．そのときに，横軸と縦軸のラベルをつける．
